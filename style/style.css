@@ -27,7 +27,7 @@ body {
     border-radius: 75px;
     background-color: rgb(38, 53, 93);
     border: 2.5px solid rgb(255, 237, 0);
-    box-shadow: 1px 1px 30px 5px rgb(255, 237, 0);
+    box-shadow: 1px 1px 10px 1.5px rgb(255, 237, 0);
 }
 
 .inputContainer {

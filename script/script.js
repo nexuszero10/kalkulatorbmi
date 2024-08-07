@@ -107,21 +107,41 @@ submitButton.addEventListener('click', () => {
         // calculate bmi, set bmistatus, and indicator pointer
 
         const indicator = document.getElementById('indicator');
+        const mobile = window.matchMedia('(max-width: 425px)');
+
         if (bmi < 18.5) {
             bmiStatus = 'Underweight';
-            indicator.style.right = '190px';
+            if (mobile.matches) {
+                indicator.style.right = '100px';
+            } else {
+                indicator.style.right = '205px';
+            }
         } else if (bmi >= 18.5 && bmi < 25) {
             bmiStatus = 'Normal';
-            indicator.style.right = '95px';
+            if (mobile.matches) {
+                indicator.style.right = '55px';
+            } else {
+                indicator.style.right = '105px';
+            }
         } else if (bmi >= 25 && bmi < 30) {
             bmiStatus = 'Overweight';
+            indicator.style.left = '0px';
         } else if (bmi >= 30 && bmi < 35) {
-            bmiStatus = 'Obese';
-            indicator.style.left = '95px';
+            bmiStatus = 'Obese I';
+            if (mobile.matches) {
+                indicator.style.left = '55px';
+            } else {
+                indicator.style.left = '105px';
+            }
         } else {
-            bmiStatus = 'Extremely Obese';
-            indicator.style.left = '190px';
+            bmiStatus = 'Obese II';
+            if (mobile.matches) {
+                indicator.style.left = '100px';
+            } else {
+                indicator.style.left = '205px';
+            }
         }
+
 
 
         // set image gender result
