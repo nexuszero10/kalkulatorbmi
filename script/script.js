@@ -126,7 +126,7 @@ submitButton.addEventListener('click', () => {
 
         // set image gender result
         const genderChoosen = document.getElementById("bmiImage");
-        genderChoosen.src = genderValue === 'Male' ? 'male.png' : 'female.png';
+        genderChoosen.src = genderValue === 'Male' ? 'aset/male.png' : 'aset/female.png';
 
         // set gender span
         const spanGender = document.getElementById('genderSpan');
