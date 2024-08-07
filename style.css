@@ -1,0 +1,333 @@
+body * {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+body {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(44, 44, 44);
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.superContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 40%;
+    max-width: 800px;
+    height: auto;
+    margin-top: 20px;
+    gap: 50px;
+    border-radius: 75px;
+    background-color: rgb(38, 53, 93);
+    border: 2.5px solid rgb(255, 237, 0);
+    box-shadow: 1px 1px 30px 5px rgb(255, 237, 0);
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.inputContainer h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Honk";
+    margin-bottom: 20px;
+    color: aliceblue;
+    letter-spacing: 0.15rem;
+}
+
+.genderButton {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 10px;
+}
+
+.genderButton button {
+    background: none;
+    border: none;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 6.5px 7.5px;
+}
+
+.genderButton button:active {
+    position: relative;
+    left: 6.5px;
+    top: 7.5px;
+    box-shadow: none;
+}
+
+.genderButton button:hover {
+    cursor: pointer;
+}
+
+.genderButton img {
+    width: 100%;
+    height: auto;
+    width: 55px;
+}
+
+.inputData {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+.inputData label {
+    font-size: 32.5px;
+    letter-spacing: 5px;
+    margin-top: 10px;
+    font-weight: 600;
+    font-family: "Honk";
+}
+
+.inputData input {
+    padding: 5px;
+    width: 75%; 
+    max-width: 600px;
+    border: none;
+    border-radius: 12.5px;
+    box-shadow: 7.5px 10px rgb(0, 0, 0);
+    font-size: 20px;
+    text-align: center;
+}
+
+.inputData p {
+    font-size: 15px;
+    color: rgb(255, 237, 0);
+    letter-spacing: 0.1rem;
+    display: none;
+}
+
+.actionButton {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#submitButton {
+    background-color: rgb(255, 95, 0);
+}
+
+#resetButton {
+    background-color: rgb(22, 255, 0);
+}
+
+.inputData input[type="button"] {
+    width: auto;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: 0px 7.5px;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 30px;
+    padding: 7.5px 10px;
+}
+
+.inputData input[type="button"]:hover {
+    cursor: pointer;
+}
+
+.inputData input[type="button"]:active {
+    position: relative;
+    top: 7.5px;
+    box-shadow: none;
+}
+
+input[id="inputGender"]:hover {
+    cursor: not-allowed;
+}
+
+.inputData input:focus {
+    border: none;
+    outline: none;
+}
+
+.resultContainer {
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+    gap: 10px;
+    display: none;
+}
+
+.resultHeader {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 10px;
+    align-items: center;
+}
+
+.resultHeader img {
+    width: 100%;
+    height: auto;
+    width: 70px;
+}
+
+.resultHeader button {
+    display: flex;
+    width: fit-content;
+    background: none;
+    border-radius: 20px;
+    border: none;
+}
+
+#bmiGender {
+    font-size: 20px;
+    letter-spacing: 2.5px;
+}
+
+#bmiStatus {
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin-top: 10px;
+    color: rgb(255, 237, 0);
+}
+
+.userData {
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    gap: 25px;
+    width: 80%;
+    padding: 2.5px;
+    justify-content: space-evenly;
+}
+
+.userData h1 {
+    font-size: 17.5px;
+}
+
+.resultContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultContent h1 {
+    display: flex;
+    width: fit-content;
+    padding: 0px 10px;
+    font-size: 75px;
+    letter-spacing: 5px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#barContainer {
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    padding: 2.5px;
+    gap: 2.5px;
+    width: 85%;
+}
+
+#barContainer * {
+    flex: 1;
+    height: 20px;
+}
+
+.underweight {
+    background-color: rgb(0, 150, 255);
+    border-radius: 20px 0px 0px 20px;
+}
+
+.normalweight {
+    background-color: rgb(22, 255, 0);
+}
+
+.overweight {
+    background-color: rgb(255, 95, 0);
+}
+
+.obesei {
+    background-color: rgb(255, 0, 0);
+}
+
+.obeseii {
+    background-color: brown;
+    border-radius: 0px 20px 20px 0px;
+}
+
+#indicator {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2.5px;
+    width: 10%;
+    margin-top: 5px;
+    position: relative;
+}
+
+#content {
+    background-color: aliceblue;
+    height: 35px;
+    border-radius: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 6px 7px black;
+    border: none;
+    flex-wrap: nowrap;
+}
+
+#pointer {
+    background-color: aliceblue;
+    height: 10px;
+    width: 15px;
+    align-self: center;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    border: none;
+}
+
+.resultFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.resultFooter input[type="button"] {
+    width: auto;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: 0px 7.5px;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 30px;
+    padding: 7.5px 10px;
+    background-color: rgb(22, 255, 0);
+}
+
+.resultFooter input[type="button"]:hover {
+    cursor: pointer;
+}
+
+.resultFooter input[type="button"]:active {
+    position: relative;
+    top: 7.5px;
+    box-shadow: none;
+}
+

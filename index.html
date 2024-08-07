@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Honk&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="superContainer">
+        <div class="inputContainer" id="inputContainer">
+            <h1>CHECK YOUR BMI</h1>
+
+            <div class="genderButton">
+                <button class="blue" id="maleButton"><img src="male.png" alt="male"></button>
+                <button class="red" id="femaleButton"><img src="female.png" alt="female"></button>
+            </div>
+            <div class="inputData">
+                <label for="inputGender">Gender</label>
+                <input type="text" id="inputGender" placeholder="click icon to input" readonly required>
+                <p id="invalidGender" class="error-message"></p>
+
+                <label for="inputHeight">Height</label>
+                <input type="number" id="inputHeight" placeholder="input height (cm)" required>
+                <p id="invalidHeight" class="error-message"></p>
+
+                <label for="inputWeight">Weight</label>
+                <input type="number" id="inputWeight" placeholder="input weight (kg)" required>
+                <p id="invalidWeight" class="error-message"></p>
+
+                <div class="actionButton">
+                    <input type="button" value="CHECK" id="submitButton">
+                    <input type="button" value="RESET" id="resetButton">
+                </div>
+            </div>
+        </div>
+        <div class="resultContainer" id="resultContainer">
+            <div class="resultHeader">
+                <button id="imageButton"><img src="" alt="imageGender" id="bmiImage"></button>
+                <h1 id="bmiGender">BMI for <span id="genderSpan"></span></h1>
+                <h1 id="bmiStatus"></h1>
+                <div class="userData">
+                    <h1 id="bmiHeight">Height (cm) <span id="heightSpan"></span></h1>
+                    <h1 id="bmiWeight">Weight (kg) <span id="weightSpan"></span></h1>
+                </div>
+            </div>
+            <div class="resultContent">
+                <h1 id="bmiNumber"></h1>
+                <div id="barContainer">
+                    <div class="bar underweight"></div>
+                    <div class="bar normalweight"></div>
+                    <div class="bar overweight"></div>
+                    <div class="bar obesei"></div>
+                    <div class="bar obeseii"></div>
+                </div>
+                <div id="indicator">
+                    <div id="content"></div>
+                    <div id="pointer"></div>
+                </div>
+            </div>
+            <div class="resultFooter">
+                <input type="button" id="reInput" value="RETURN">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
