@@ -7,6 +7,7 @@ body * {
 body {
     padding: 0;
     display: flex;
+    background-color: rgb(38, 53, 93);
     flex-direction: column;
     color: aliceblue;
     align-items: center;
